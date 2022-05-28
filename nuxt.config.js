@@ -26,6 +26,13 @@ export default {
   // Plugins to run before rendering page: https://go.nuxtjs.dev/config-plugins
   plugins: [],
 
+  // data of microCMS key and data
+  privateRuntimeConfig: {
+    axios: {
+      MICROCMS_API_URL: process.env.MICROCMS_API_URL,
+      MICROCMS_API_KEY: process.env.MICROCMS_API_KEY,
+    },
+  },
   // Auto import components: https://go.nuxtjs.dev/config-components
   components: true,
 

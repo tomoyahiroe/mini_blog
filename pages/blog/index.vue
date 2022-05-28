@@ -1,17 +1,18 @@
 <template>
-  <div class="alert-wrapper">
+  <div class="wrapper">
     <div class="alert">Coming Soon...</div>
+    <BlogList />
   </div>
 </template>
 
 <script>
 export default {
-  name: 'BlogList',
+  name: 'BlogPage',
 }
 </script>
 
-<style>
-.alert-wrapper {
+<style scoped>
+.wrapper {
   width: 100vw;
 }
 
