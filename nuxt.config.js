@@ -27,11 +27,9 @@ export default {
   plugins: [],
 
   // data of microCMS key and data
-  privateRuntimeConfig: {
-    axios: {
-      MICROCMS_API_URL: process.env.MICROCMS_API_URL,
-      MICROCMS_API_KEY: process.env.MICROCMS_API_KEY,
-    },
+  publicRuntimeConfig: {
+    MICROCMS_API_URL: process.env.MICROCMS_API_URL,
+    MICROCMS_API_KEY: process.env.MICROCMS_API_KEY,
   },
   // Auto import components: https://go.nuxtjs.dev/config-components
   components: true,
@@ -47,7 +45,7 @@ export default {
   ],
 
   // Modules: https://go.nuxtjs.dev/config-modules
-  modules: [],
+  modules: ['@nuxtjs/axios'],
 
   // Vuetify module configuration: https://go.nuxtjs.dev/config-vuetify
   vuetify: {

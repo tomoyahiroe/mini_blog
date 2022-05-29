@@ -24,7 +24,7 @@
       </v-container>
     </v-app-bar>
 
-    <v-main class="main-content mx-4 my-4">
+    <v-main class="main-content grey lighten-2">
       <Nuxt />
     </v-main>
   </v-app>
@@ -54,8 +54,9 @@ export default {
 
 <style>
 .bg {
+  box-sizing: border-box;
+  background-color: #bdbdbd;
   width: 100vw;
-  background-color: #f3f3f4;
   color: #030303;
 }
 
@@ -74,6 +75,7 @@ export default {
 }
 
 .main-content {
+  width: 100vw;
   margin: 0 auto;
 }
 </style>
