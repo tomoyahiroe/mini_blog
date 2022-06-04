@@ -53,6 +53,15 @@ export default {
 </script>
 
 <style>
+body {
+  font-family: serif;
+}
+
+p {
+  font-size: 18px;
+  line-height: 1.7;
+}
+
 .bg {
   box-sizing: border-box;
   background-color: #bdbdbd;

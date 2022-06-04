@@ -1,4 +1,5 @@
 import colors from 'vuetify/es5/util/colors'
+import axios from 'axios'
 
 export default {
   // Target: https://go.nuxtjs.dev/config-target
@@ -68,4 +69,27 @@ export default {
 
   // Build Configuration: https://go.nuxtjs.dev/config-build
   build: {},
+  generate: {
+    async routes() {
+      // const routes = []
+      return await axios
+        .get(process.env.MICROCMS_API_URL + '/blog', {
+          headers: { 'X-MICROCMS-API-KEY': process.env.MICROCMS_API_KEY },
+        })
+        .then((res) => {
+          return res.data.contents.map((content) => {
+            return {
+              routes: '/blog/' + content.id,
+            }
+          })
+          // for (let i = 0, len = res.data.contents.length; i < len; i++) {
+          //   const item = res.data.contents[i]
+          //   routes.push({
+          //     route: '/blog/' + item.id,
+          //     payload: item,
+          //   })
+          // }
+        })
+    },
+  },
 }

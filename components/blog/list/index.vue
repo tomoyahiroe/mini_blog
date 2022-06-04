@@ -6,6 +6,7 @@
       :key="content.title"
       :content="content"
     />
+    {{ contents }}
   </v-container>
 </template>
 
